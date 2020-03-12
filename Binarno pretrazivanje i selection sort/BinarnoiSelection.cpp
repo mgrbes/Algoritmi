@@ -1,18 +1,17 @@
-﻿
-
+﻿#include <stdlib.h>
 #include <iostream>
-#include <stdlib.h>
+
 
 int main()
 {
-	int n = 4;
+	int n = 5;
 	int a = 6;
-	int M[6] = {1,6,2,7,3,4};
-	
-	int gornjaG=a-1, donjaG=0, srednjaV=0;
+	int M[6] = { 1,6,2,7,3,4 };
 
-	for (int i = 0; i < a-1; i++) {
-		for (int j = i+1; j <a; j++) {
+	int gornjaG = a - 1, donjaG = 0, srednjaV = 0;
+
+	for (int i = 0; i < a - 1; i++) {
+		for (int j = i + 1; j < a; j++) {
 			if (M[i] > M[j]) {
 				int temp = M[i];
 				M[i] = M[j];
@@ -25,19 +24,22 @@ int main()
 		printf("%d ", M[i]);
 	}
 
-	while (donjaG<=gornjaG) {
+	while (donjaG <= gornjaG) {
 		srednjaV = (donjaG + gornjaG) / 2;
-		if (srednjaV == n) {
-			printf("Broj se nalazi na %d mjestu", srednjaV);
+		if (M[srednjaV] == n) {
+			printf("Broj se nalazi na %d mjestu", srednjaV+1);
 			exit(0);
 		}
-		if (n > srednjaV) 
+		if (n > M[srednjaV])
 			donjaG = srednjaV + 1;
-		if (n < srednjaV)
+		if (n < M[srednjaV])
 			gornjaG = srednjaV - 1;
-		
-			
+
+
 	}
 	printf("\nBroj ne postoji");
 }
+	
+	
+
 
