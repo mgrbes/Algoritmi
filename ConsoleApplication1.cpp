@@ -6,15 +6,15 @@ int suma = 0;
 int cijeliBroj(int n) {
     if (n <= 0)
         return 1;
-    
-    printf(" %d ", n / 16);
-    cijeliBroj(n/16);
+    suma += (n % 10)/16;
+   
+    cijeliBroj(n/10);
     
 }
 
 int main()
 {
-    cijeliBroj(38);
+    cijeliBroj(2567);
 
 }
 
