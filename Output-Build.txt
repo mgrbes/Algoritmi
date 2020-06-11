@@ -1,6 +1,0 @@
-﻿1>------ Build started: Project: ConsoleApplication2, Configuration: Debug Win32 ------
-1>ConsoleApplication2.cpp
-1>C:\Users\marko\source\repos\ConsoleApplication2\ConsoleApplication2\ConsoleApplication2.cpp(17): warning C4715: 'hexadecimal': not all control paths return a value
-1>ConsoleApplication2.vcxproj -> C:\Users\marko\source\repos\ConsoleApplication2\Debug\ConsoleApplication2.exe
-1>Done building project "ConsoleApplication2.vcxproj".
-========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========
