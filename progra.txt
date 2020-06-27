@@ -1,0 +1,39 @@
+1.int main() {
+	int m=0, n=0;
+	int a[6][8];
+	srand((unsigned)time(NULL));
+	while (m<2||m>=6) {
+		printf("Unesi broj m: ");
+		scanf("%d", &m);
+	}
+	while (n < 2 || n >= 8) {
+		printf("Unesi broj n: ");
+		scanf("%d", &n);
+	}
+
+	
+	
+	for (int i = 0;i < m;i++) {
+		for (int j = 0;j < n;j++) {
+			a[i][j] = -22 + (float)rand() / RAND_MAX * (33 +22);
+		}
+	}
+	int suma = 0;
+	for (int i = 0;i < m;i++) {
+		for (int j = 0;j < n;j++) {
+			if (a[i][j]%2==0) {
+				if (i % 2 != 0 && j % 2 != 0) {
+					suma += a[i][j];
+					printf("[%d] ", a[i][j]);
+				}
+			}
+		}
+	}
+	printf("suma=%d\n", suma);
+	for (int i = 0;i < m;i++) {
+		for (int j = 0;j < n;j++) {
+			printf("%d ", a[i][j]);
+		}
+		printf("\n");
+	}
+	}
